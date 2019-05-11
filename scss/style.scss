@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+$sans-serif: 'Raleway', sans-serif;
+$font-light: 300;
+$font-bold: 700;
+//-----------------------//
+
+$black: #353535;
+$gray: #4f4f4f;
+$medium-gray: #737373;
+$light-gray: #c4c4c4;
+//----------------------//
+
+
+$body-background: $black;
+$menu-background: $gray;
+
+$main-font-color: $light-gray;
+$menu-active-color: $light-gray;
+$menu-font-color: $medium-gray;
+$accent: #c99c42;
+$link-color: $accent;
+
+
+
+
+//---------------------------------------//
+$accent: #c99c42;
+$secondary: #db7469;
+$dark: #222;
+$medium-dark: lighten($dark, 55%);
+
+
+@mixin section-padding {
+  padding: 5vh 0;
+  @media (min-width: 800px) { // I'd prefer this to be the $md Bootstrap grid variable
+    padding: 10vh 0;
+    }
+  }
+
+
+body {
+  padding-top: 3rem;
+}
+
+.hero {
+  padding: 20vh 35%;
+  background: linear-gradient(to top, $secondary, $accent);
+}
+
+.projects {
+  @include section-padding;
+  background: $dark;
+  color: white;
+}
+
+.contact {
+  p {
+    margin-top: 15%;
+  }
+  //@include section-padding;
+  padding: 15vh 0;
+  height: 90vh;
+  text-align: left;
+  background: linear-gradient(to top, $accent, $secondary);
+  
+  .button{
+    text-decoration: none;
+  }
+}
+
+
+footer {
+  padding: 2%;
+  text-align: center;
+  background: darken($black, 25%);
+  color: white;
+}
+
+
+.projects-user{
+  .nav-item {
+  color: $menu-font-color;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+  
+  @media (min-width: 1515px) {
+    display: block;
+    margin: 7vh 0;
+  }
+  
+  &.active {
+    color: $menu-active-color;
+  }
+}
+
+
+.main-content {
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+}
+
+
+//-----------portfolio---------//
+
+.portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+}
+
+.portfolio-item {
+  box-sizing: border-box;
+  background: $accent;
+  color: $light-gray;
+  font-weight: $font-bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 3;
+  
+  .port-link{
+    
+    text-decoration: none;
+    color:$light-gray;
+    padding: 20%;
+  }
+  
+  &.small {
+    grid-row: span 5;
+    grid-column: span 1;
+  }
+  
+  &.medium {
+    grid-row: span 6;
+    grid-column: span 2;
+  }
+  
+  &.large {
+    grid-row: span 7;
+    grid-column: span 3;
+  }
+  
+  &.tall {
+    grid-row: span 12;
+    grid-column: span 2;
+  }
+  
+  &.wide {
+    grid-row: span 7;
+    grid-column: span 3;
+  }
+  
+  &:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.9);
+    cursor: pointer;
+  }
+}
+
+//====items content=====//
+.one {
+  background-image: url(//unsplash.it/400/200);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+    
+  }
+}
+.two {
+  background-image: url(//unsplash.it/800/600);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+  }
+}
+
+.three {
+  background-image: url(//unsplash.it/500/300);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+  }
+}
+
+.four {
+  background-image: url(//unsplash.it/200/100);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+  }
+}
+
+.five {
+  background-image: url(//unsplash.it/500/400);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+  }
+}
+
+
+.six {
+  background-image: url(//unsplash.it/900/200);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: $black;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: .2;
+  }
+}
+}

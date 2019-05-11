@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
+body {
+  padding-top: 3rem;
+}
+
+.hero {
+  padding: 20vh 35%;
+  background: linear-gradient(to top, #db7469, #c99c42);
+}
+
+.projects {
+  padding: 5vh 0;
+  background: #222;
+  color: white;
+}
+@media (min-width: 800px) {
+  .projects {
+    padding: 10vh 0;
+  }
+}
+
+.contact {
+  padding: 15vh 0;
+  height: 90vh;
+  text-align: left;
+  background: linear-gradient(to top, #c99c42, #db7469);
+}
+.contact p {
+  margin-top: 15%;
+}
+.contact .button {
+  text-decoration: none;
+}
+
+footer {
+  padding: 2%;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.projects-user .nav-item {
+  color: #737373;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+}
+@media (min-width: 1515px) {
+  .projects-user .nav-item {
+    display: block;
+    margin: 7vh 0;
+  }
+}
+.projects-user .nav-item.active {
+  color: #c4c4c4;
+}
+.projects-user .main-content {
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+}
+.projects-user .portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+}
+.projects-user .portfolio-item {
+  box-sizing: border-box;
+  background: #c99c42;
+  color: #c4c4c4;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 3;
+}
+.projects-user .portfolio-item .port-link {
+  text-decoration: none;
+  color: #c4c4c4;
+  padding: 20%;
+}
+.projects-user .portfolio-item.small {
+  grid-row: span 5;
+  grid-column: span 1;
+}
+.projects-user .portfolio-item.medium {
+  grid-row: span 6;
+  grid-column: span 2;
+}
+.projects-user .portfolio-item.large {
+  grid-row: span 7;
+  grid-column: span 3;
+}
+.projects-user .portfolio-item.tall {
+  grid-row: span 12;
+  grid-column: span 2;
+}
+.projects-user .portfolio-item.wide {
+  grid-row: span 7;
+  grid-column: span 3;
+}
+.projects-user .portfolio-item:hover {
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+.projects-user .one {
+  background-image: url(//unsplash.it/400/200);
+}
+.projects-user .one::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .one:hover::before {
+  opacity: .2;
+}
+.projects-user .two {
+  background-image: url(//unsplash.it/800/600);
+}
+.projects-user .two::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .two:hover::before {
+  opacity: .2;
+}
+.projects-user .three {
+  background-image: url(//unsplash.it/500/300);
+}
+.projects-user .three::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .three:hover::before {
+  opacity: .2;
+}
+.projects-user .four {
+  background-image: url(//unsplash.it/200/100);
+}
+.projects-user .four::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .four:hover::before {
+  opacity: .2;
+}
+.projects-user .five {
+  background-image: url(//unsplash.it/500/400);
+}
+.projects-user .five::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .five:hover::before {
+  opacity: .2;
+}
+.projects-user .six {
+  background-image: url(//unsplash.it/900/200);
+}
+.projects-user .six::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+.projects-user .six:hover::before {
+  opacity: .2;
+}
