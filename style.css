@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 20px;
+  -webkit-transition: translate 2500ms ease-in-out;
+  transition: translate 2500ms ease-in-out;
+}
+
+/*Site navigation*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  background-color: #c3c3c3;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 1em 2em;
+  position: relative;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #561ed8;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.nav-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color: whitesmoke;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Home Page */
+.welcome-section {
+  height: 95vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome-section h1 {
+  font-size: 1.3rem;
+}
+
+.welcome-section h1 a {
+  text-decoration: none;
+  color: #561ed8;
+  font-size: 1.2rem;
+}
+
+.welcome-section h2 {
+  font-weight: 100;
+  font-size: .8rem;
+}
+
+.welcome-section h2:nth-child(2) {
+  position: absolute;
+  bottom: 20%;
+}
+
+/* Projects Page */
+.projects-section {
+  background-color: #5f5e5e;
+  padding: 5% 15%;
+  -webkit-box-shadow: inset 0px 11px 30px -20px black, inset 0px -11px 30px -20px black;
+          box-shadow: inset 0px 11px 30px -20px black, inset 0px -11px 30px -20px black;
+}
+
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  height: 70vh;
+}
+
+.portfolio-item {
+  background: #c3c3c3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: top left;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 3;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 20%;
+  font-size: 1.1rem;
+}
+
+.portfolio-item.small {
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.portfolio-item.medium {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.portfolio-item.large {
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+.portfolio-item.tall {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+
+.portfolio-item.wide {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.portfolio-item:hover {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+/* Items content */
+.one {
+  background-image: url(//unsplash.it/400/200);
+}
+
+.two {
+  background-image: url(//unsplash.it/800/600);
+}
+
+.three {
+  background-image: url(//unsplash.it/500/300);
+}
+
+.four {
+  background-image: url(//unsplash.it/200/100);
+}
+
+.five {
+  background-image: url(//unsplash.it/500/400);
+}
+
+.six {
+  background-image: url(//unsplash.it/900/200);
+}
+
+.one::before,
+.two::before,
+.three::before,
+.four::before,
+.five::before,
+.six::before {
+  content: '';
+  display: block;
+  background: #353535;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+
+.one:hover::before,
+.two:hover::before,
+.three:hover::before,
+.four:hover::before,
+.five:hover::before,
+.six:hover::before {
+  opacity: .6;
+}
+
+/* Contact page */
+.contact-section {
+  height: 20vh;
+  padding: 15% 0 10% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c3c3c3;
+}
+
+.contact-ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin: 1em 4em;
+  position: relative;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+  color: #561ed8;
+}
+
+.fab,
+.fas {
+  font-size: 3rem;
+}
+
+footer {
+  padding: .7em 0 .3em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #141212;
+  color: whitesmoke;
+}
+
+footer p {
+  font-size: .7rem;
+}
+
+/* Intersection Observer */
+.fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 1500ms ease-in;
+  transition: opacity 1500ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.long {
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.longest {
+  -webkit-transition-delay: 3500ms;
+          transition-delay: 3500ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+/*# sourceMappingURL=style.css.map */

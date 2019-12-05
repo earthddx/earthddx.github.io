@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+    font-family: 'Comfortaa', sans-serif; 
+    font-size: 20px;
+    transition: translate 2500ms ease-in-out;
+}
+
+/*Site navigation*/
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 1em;
+    background-color: #c3c3c3;
+    box-shadow: 0 3px 8px rgba(black, 0.4)
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: 1em 2em;
+    position: relative;
+    
+
+    &:after{
+        content:"";
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: rgb(86, 30, 216);
+        transform: scaleX(0);
+        transition: transform 200ms ease-in-out;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+    }
+    &:hover {
+        color: whitesmoke;
+        text-shadow: 0 0 5px rgba(0,0,0,0.9);  
+    } 
+}
+
+/* Home Page */
+.welcome-section {
+    height: 95vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+   
+    h1{
+        font-size: 1.3rem;
+        a {
+            text-decoration: none;
+            color: rgb(86, 30, 216);
+            font-size: 1.2rem;
+        }
+    }
+    h2{
+        font-weight: 100;
+        font-size: .8rem;
+    }
+    h2:nth-child(2){
+        position: absolute;
+        bottom: 20%;
+    }
+}
+
+/* Projects Page */
+.projects-section {
+    background-color: #5f5e5e;
+    padding: 5% 15%;
+    box-shadow: 
+        inset 0px 11px 30px -20px black,
+        inset 0px -11px 30px -20px black; 
+}
+
+.portfolio {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    height: 70vh;
+}
+
+.portfolio-item {
+    background: #c3c3c3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: top left;
+    transition: all ease-in-out 300ms;
+    position: relative;
+    z-index: 3;
+
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 20%;
+        font-size: 1.1rem;
+    }
+
+    &.small {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    &.medium {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    &.large {
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+      
+      &.tall {
+        grid-row: span 3;
+        grid-column: span 2;
+      }
+      
+      &.wide {
+        grid-row: span 2;
+        grid-column: span 3;
+      }
+
+      &:hover {
+        text-shadow: 0 0 5px rgba(0,0,0,0.9);
+        cursor: pointer;
+      }
+}
+
+/* Items content */
+.one {
+    background-image:  url(//unsplash.it/400/200);
+}
+
+.two {
+    background-image: url(//unsplash.it/800/600);
+}
+
+.three {
+    background-image: url(//unsplash.it/500/300);
+}
+
+.four {
+    background-image: url(//unsplash.it/200/100);
+}
+
+.five {
+    background-image: url(//unsplash.it/500/400);
+}
+
+.six {
+    background-image: url(//unsplash.it/900/200);
+}
+
+.one::before,
+.two::before,
+.three::before,
+.four::before,
+.five::before,
+.six::before {
+    content: '';
+    display: block;
+    background: #353535;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    bottom:0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+    }
+.one:hover::before,
+.two:hover::before,
+.three:hover::before,
+.four:hover::before,
+.five:hover::before,
+.six:hover::before {
+    opacity: .6;
+}
+
+
+/* Contact page */
+.contact-section {
+    height: 20vh;
+    padding: 15% 0 10% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c3c3c3;
+}
+
+.contact-ul {
+    list-style: none;
+    display: flex;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    margin: 1em 4em;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: rgb(86, 30, 216);
+    }
+}
+
+.fab, 
+.fas {
+    font-size: 3rem;
+}
+
+footer {
+    padding: .7em 0 .3em 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(20, 18, 18);
+    color: whitesmoke;
+    p {
+        font-size: .7rem;
+    }
+}
+
+
+/* Intersection Observer */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1500ms ease-in;
+  }
+  
+.fade-in.appear {
+    opacity: 1;
+}
+
+.long {
+    transition-delay:  1500ms;
+    transition-property: opacity;
+}
+
+.longest {
+    transition-delay:  3500ms;
+    transition-property: opacity;
+}
+
