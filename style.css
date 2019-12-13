@@ -42,7 +42,7 @@ header {
   text-decoration: none;
   color: inherit;
   display: inline-block;
-  padding: 1em 2em;
+  padding: 1em 1em;
   position: relative;
 }
 
@@ -115,8 +115,10 @@ header {
 .projects-section {
   background-color: #5f5e5e;
   padding: 5% 15%;
-  -webkit-box-shadow: inset 0px 11px 30px -20px black, inset 0px -11px 30px -20px black;
-          box-shadow: inset 0px 11px 30px -20px black, inset 0px -11px 30px -20px black;
+  -webkit-box-shadow: inset 0px 11px 30px -20px black,
+ inset 0px -11px 30px -20px black;
+          box-shadow: inset 0px 11px 30px -20px black,
+ inset 0px -11px 30px -20px black;
 }
 
 .portfolio {
@@ -320,5 +322,69 @@ footer p {
           transition-delay: 3500ms;
   -webkit-transition-property: opacity;
   transition-property: opacity;
+}
+
+/*
+responsive design for [iPhone X]
+        to be continued...
+            */
+@media (max-width: 400px) {
+  .nav-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+  .welcome-section h1 a {
+    padding: 10px;
+  }
+  .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio-item {
+    min-width: 100%;
+    max-height: 13%;
+    margin: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contact-section {
+    min-height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #c3c3c3;
+  }
+  .contact-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
