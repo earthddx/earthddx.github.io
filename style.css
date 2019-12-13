@@ -363,6 +363,9 @@ responsive design for [iPhone X]
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .projects-section {
+    padding: 0;
+  }
   .contact-section {
     min-height: 90vh;
     display: -webkit-box;
