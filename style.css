@@ -10,7 +10,7 @@
   transition: translate 2500ms ease-in-out;
 }
 
-a {
+a * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
