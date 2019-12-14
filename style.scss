@@ -7,6 +7,9 @@
     font-size: 20px;
     transition: translate 2500ms ease-in-out;
 }
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
 /*Site navigation*/
 header {
@@ -269,9 +272,11 @@ responsive design for [iPhone X]
         to be continued...
             */
 @media (max-width: 400px) {
+ 
     .nav-ul{
         display: flex; 
-        justify-content: center; 
+        justify-content: center;
+
     }
     .nav-link{
        font-size: 20px;
@@ -280,18 +285,25 @@ responsive design for [iPhone X]
         padding: 10px;
     }
     .portfolio {
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
     .portfolio-item {
-        min-width: 100%;
+        min-width: 90%;
         max-height: 13%;
         margin: 10px;
         align-self: center;
     }
+    
     .projects-section{
         padding: 0;
+        background-color: rgb(37, 35, 35);
+        a{
+            padding: 20px 70px;
+            text-align: center;
+        }
     }
     .contact-section {
         min-height: 90vh;
