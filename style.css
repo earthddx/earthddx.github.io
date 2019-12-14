@@ -10,6 +10,10 @@
   transition: translate 2500ms ease-in-out;
 }
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /*Site navigation*/
 header {
   position: fixed;
@@ -344,6 +348,7 @@ responsive design for [iPhone X]
     padding: 10px;
   }
   .portfolio {
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -356,7 +361,7 @@ responsive design for [iPhone X]
             justify-content: center;
   }
   .portfolio-item {
-    min-width: 100%;
+    min-width: 90%;
     max-height: 13%;
     margin: 10px;
     -ms-flex-item-align: center;
@@ -365,6 +370,11 @@ responsive design for [iPhone X]
   }
   .projects-section {
     padding: 0;
+    background-color: #252323;
+  }
+  .projects-section a {
+    padding: 20px 70px;
+    text-align: center;
   }
   .contact-section {
     min-height: 90vh;
