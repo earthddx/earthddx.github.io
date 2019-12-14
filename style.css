@@ -8,11 +8,9 @@
   font-size: 20px;
   -webkit-transition: translate 2500ms ease-in-out;
   transition: translate 2500ms ease-in-out;
-}
-
-a * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 
 /*Site navigation*/
 header {
