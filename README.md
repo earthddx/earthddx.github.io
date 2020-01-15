@@ -1,6 +1,7 @@
 # earthddx.github.io
 
 portfolio website
-
-...changes coming up:
+p.s. working on responsive design at the moment
 ![](website.gif)
+
+
