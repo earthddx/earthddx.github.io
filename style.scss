@@ -227,7 +227,7 @@ header {
             padding:7em 2em 0em 2em;
 
             li{
-                padding: 0.5em;
+                padding: .5em .3em;
             }
         }
 
@@ -460,41 +460,58 @@ footer {
 responsive design for [iPhone X, Pixel 2]
         to be continued...
             */
-@media (max-width: 420px) {
+@media (max-width: 590px) {
+    body{
+        padding: 0rem;//the border arount the page
+
+    }
     .header{
-        max-width: 100vw;
+        max-width: 90vw;
+    }
+    .nav-scrolled{
+        top: 0%;
+        left:0%;
+        right:0%;
     }
     .nav-ul{
         display: flex; 
         justify-content: center;
-
     }
     .nav-link{
        font-size: 20px;
+       margin: 3px;
     }
     .welcome-section h1 a{
         padding: 10px;
     }
-    .portfolio {
-        min-height:90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .portfolio-item {
-        min-width: 90%;
-        max-height: 13%;
-        margin: 10px;
-        align-self: center;
+
+    .welcome-section:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0em;
+        right: 0em;
+        padding: 0em;
+        background-color: white;
     }
     
+    .card{
+        margin: 10px;
+    }
+    .card:nth-child(-n+3) {
+        margin-bottom: 10px;
+    }
+    .cards{
+        opacity: 1;
+        position: relative;
+    }
+
     .projects-section{
+        min-height: 280vh;
+    }
+
+    .separator{
         padding: 0;
-        background-color: rgb(37, 35, 35);
-        a{
-            padding: 20px 70px;
-            text-align: center;
-        }
     }
     .contact-section {
         min-height: 90vh;
@@ -509,5 +526,25 @@ responsive design for [iPhone X, Pixel 2]
     }
     .contact-ul {
         flex-direction: column;
+    }
+}
+
+@media (max-height: 740px) {
+    .projects-section{
+        min-height: 300vh;
+    }
+}
+
+@media (max-height: 670px) {
+    .projects-section{
+        min-height: 330vh;
+    }
+}
+
+@media (max-width: 1580px) {
+    .cards{
+        position: absolute;
+        left: 0;
+        right: 0;
     }
 }
