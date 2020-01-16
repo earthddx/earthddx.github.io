@@ -125,7 +125,6 @@ header {
 
 .welcome-section h2:nth-child(2) {
   font-size: .8rem;
-  color: black;
   position: absolute;
   bottom: 20%;
   text-transform: lowercase;
@@ -139,6 +138,66 @@ header {
   right: 3em;
   padding: 2em;
   background-color: white;
+}
+
+.about-section {
+  height: 40vh;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.info-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-text {
+  width: 35vw;
+  text-align: left;
+  margin: 2rem;
+}
+
+.info-text p {
+  color: rgba(75, 70, 70, 0.7);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.info-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(to right, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.info-images {
+  width: 60%;
+  margin-left: 2rem;
+}
+
+.info-images img {
+  height: 8rem;
+  margin: 1.1rem;
+  -webkit-filter: drop-shadow(1px 1px 2px #222);
+          filter: drop-shadow(1px 1px 2px #222);
 }
 
 /* Projects Page */
@@ -240,6 +299,7 @@ header {
   top: 30%;
   left: 2%;
   right: 2%;
+  font-family: 'Montserrat', serif;
   font-size: 1.3rem;
   font-weight: 300;
   color: #fff;
@@ -294,8 +354,10 @@ header {
 }
 
 .card-back .btn:hover {
-  background-color: rgba(0, 0, 0, 0.21);
-  color: white;
+  -webkit-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: whitesmoke;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
 }
@@ -464,8 +526,8 @@ footer p {
   right: 30px;
   padding: .5rem;
   background-color: #FFF;
-  -webkit-clip-path: circle(40%);
-          clip-path: circle(40%);
+  -webkit-clip-path: circle(35%);
+          clip-path: circle(35%);
   -webkit-transition: all 200ms;
   transition: all 200ms;
   font-size: 30px;
@@ -475,7 +537,7 @@ footer p {
 }
 
 .popup .close:hover {
-  color: #06D85F;
+  color: #2ca59b;
 }
 
 .popup__content {
@@ -513,6 +575,13 @@ footer p {
   opacity: 1;
 }
 
+.short {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
 .long {
   -webkit-transition-delay: 1500ms;
           transition-delay: 1500ms;
@@ -531,15 +600,44 @@ footer p {
 responsive design for [iPhone X, Pixel 2]
         to be continued...
             */
+@media (max-width: 415px) {
+  .about-section {
+    height: 50%;
+  }
+  .info-text h1 {
+    font-size: .85rem;
+  }
+  .info-text p {
+    font-size: .7rem;
+  }
+  .info-images {
+    margin: .3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-images img {
+    height: 4rem;
+    margin: .4rem;
+  }
+}
+
 @media (max-width: 590px) {
   body {
     padding: 0rem;
   }
   .header {
     min-width: 100vw;
-    top: 0%;
-    left: 0%;
-    right: 0%;
   }
   .nav-scrolled {
     top: 0%;
@@ -569,6 +667,28 @@ responsive design for [iPhone X, Pixel 2]
     right: 0em;
     padding: 0em;
     background-color: white;
+  }
+  .info-text h1 {
+    font-size: .85rem;
+  }
+  .info-text p {
+    font-size: .7rem;
+  }
+  .info-images {
+    margin: .3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-images img {
+    height: 4rem;
+    margin: .4rem;
   }
   .card {
     margin: 10px;
