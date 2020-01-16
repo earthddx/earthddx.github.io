@@ -633,4 +633,11 @@ responsive design for [iPhone X, Pixel 2]
     right: 0;
   }
 }
+
+@media (min-width: 1360px) {
+  .cards {
+    left: 5%;
+    right: 5%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
