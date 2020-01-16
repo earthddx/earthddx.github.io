@@ -2,7 +2,8 @@
 
 portfolio website
 
-p.s. working on responsive design at the moment
+p.s. working on responsive design and more sections at the moment
+(more sections added..)
 ![](website.gif)
 
 
