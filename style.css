@@ -536,7 +536,7 @@ responsive design for [iPhone X, Pixel 2]
     padding: 0rem;
   }
   .header {
-    max-width: 90vw;
+    min-width: 100vw;
     top: 0%;
     left: 0%;
     right: 0%;
