@@ -45,8 +45,7 @@ header {
     padding: 1em;
     background-color: $color-black;
     box-shadow: 0 3px 8px rgba(black, 0.4);
-    transition: top 250ms ease-in;
-    
+    transition: top 250ms ease-in;  
 
 }
 
@@ -62,7 +61,6 @@ header {
     padding: 1em 1em;
     margin: 0 4em;
     position: relative;
-    
 
     &:after{
         content:"";
@@ -102,6 +100,7 @@ header {
                      url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
     background-size:cover;
     cursor: default;
+    
     h1{
         font-family: 'Montserrat';
         font-size: 5rem;
@@ -439,7 +438,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #000000cc;
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
@@ -490,8 +489,6 @@ footer {
     }
 
 }
-
-
 
 
 /* Intersection Observer */
@@ -552,11 +549,12 @@ responsive design for [iPhone X, Pixel 2]
             margin: .4rem;
         }
     }
+
 }
+
 @media (max-width: 590px) {
     body{
         padding: 0rem;//the border arount the page
-
     }
     .header{
         min-width:100vw;
@@ -574,10 +572,16 @@ responsive design for [iPhone X, Pixel 2]
        font-size: 20px;
        margin: 3px;
     }
-    .welcome-section h1 a{
-        padding: 10px;
+    .welcome-section{
+        h1{
+            font-size: 4rem;
+            line-height: 90%;
+        }
+        h2{
+            font-size:90%;
+        }
     }
-
+    
     .welcome-section:after {
         content: "";
         position: absolute;
@@ -586,6 +590,7 @@ responsive design for [iPhone X, Pixel 2]
         right: 0em;
         padding: 0em;
         background-color: white;
+        
     }
 
     .info-text{
@@ -626,6 +631,10 @@ responsive design for [iPhone X, Pixel 2]
         position: relative;
     }
 
+    .card-front ul  {
+        padding: 7em 1.5em 0em 1.5em;
+    }
+
     .projects-section{
         min-height: 280vh;
     }
@@ -633,6 +642,8 @@ responsive design for [iPhone X, Pixel 2]
     .separator{
         padding: 0;
     }
+
+
     .contact-section {
         min-height: 90vh;
         display: flex;
@@ -646,6 +657,20 @@ responsive design for [iPhone X, Pixel 2]
     }
     .contact-ul {
         flex-direction: column;
+    }
+    .popup:target .popup__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2); 
+    }
+    .popup__content{
+        height: 40vw;
+        background-color: transparent;
+    }
+    .popup .close {
+        position: absolute;
+        top: 70%;
+        right: 40%;
+        margin-bottom: 0;
     }
 }
 
