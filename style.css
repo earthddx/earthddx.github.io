@@ -207,6 +207,19 @@ header {
   height: 110vh;
 }
 
+.projects-section h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 7%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(to right, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -690,6 +703,13 @@ responsive design for [iPhone X, Pixel 2]
     height: 4rem;
     margin: .4rem;
   }
+  .projects-section {
+    padding: 1em;
+  }
+  .projects-section h1 {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+  }
   .card {
     margin: 10px;
   }
@@ -736,13 +756,13 @@ responsive design for [iPhone X, Pixel 2]
 
 @media (max-height: 740px) {
   .projects-section {
-    min-height: 300vh;
+    min-height: 320vh;
   }
 }
 
 @media (max-height: 670px) {
   .projects-section {
-    min-height: 330vh;
+    min-height: 350vh;
   }
 }
 
