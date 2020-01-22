@@ -634,7 +634,7 @@ responsive design for [iPhone X, Pixel 2]
     padding: 0rem;
   }
   .header {
-    min-width: 100vw;
+    min-width: 1000vw;
   }
   .nav-scrolled {
     top: 0%;
@@ -770,7 +770,7 @@ responsive design for [iPhone X, Pixel 2]
   }
 }
 
-@media (max-height: 1200px) {
+@media (max-width: 590px) {
   header {
     top: 0%;
     left: 0%;
