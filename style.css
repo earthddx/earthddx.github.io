@@ -104,8 +104,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: whitesmoke;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
-  background-image: linear-gradient(to right bottom, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7)), url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./images/background_gif.gif");
+  background-image: linear-gradient(to right bottom, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7)), url("./images/background_gif.gif");
   background-size: cover;
   cursor: default;
 }
@@ -230,6 +230,7 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 70rem;
+  margin: auto;
 }
 
 .card {
@@ -242,6 +243,8 @@ header {
           perspective: 150em;
   max-width: 15em;
   min-width: 14em;
+  margin: 2.5rem;
+  margin-top: 0;
 }
 
 .card-side {
@@ -276,34 +279,15 @@ header {
   cursor: default;
 }
 
-.card-front-1 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#7061f7), to(#4936f7));
-  background-image: linear-gradient(to right bottom, #7061f7, #4936f7);
-}
-
-.card-front-2 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#df5e23), to(#c46711));
-  background-image: linear-gradient(to right bottom, #df5e23, #c46711);
-}
-
-.card-front-3 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2aa17a), to(#3f683a));
-  background-image: linear-gradient(to right bottom, #2aa17a, #3f683a);
-}
-
-.card-front-4 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1a5f59), to(#0a1109));
-  background-image: linear-gradient(to right bottom, #1a5f59, #0a1109);
-}
-
-.card-front-5 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(161, 59, 187, 0.7)), to(#0a1109));
-  background-image: linear-gradient(to right bottom, rgba(161, 59, 187, 0.7), #0a1109);
-}
-
+.card-front-1 .project-name-background,
+.card-front-2 .project-name-background,
+.card-front-3 .project-name-background,
+.card-front-4 .project-name-background,
+.card-front-5 .project-name-background,
 .card-front-6 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ad9b32), to(#aa620f));
-  background-image: linear-gradient(to right bottom, #ad9b32, #aa620f);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(52, 11, 117, 0.5)), to(rgba(16, 75, 124, 0.7))), url("./images/background_gif.gif");
+  background-image: linear-gradient(to right bottom, rgba(52, 11, 117, 0.5), rgba(16, 75, 124, 0.7)), url("./images/background_gif.gif");
+  background-size: cover;
 }
 
 .card-front h2 {
@@ -441,8 +425,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
-  background-image: linear-gradient(to right bottom, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7)), url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(44, 165, 155, 0.7)), to(rgba(0, 0, 0, 0.7))), url("./images/background_gif.gif");
+  background-image: linear-gradient(to right bottom, rgba(44, 165, 155, 0.7), rgba(0, 0, 0, 0.7)), url("./images/background_gif.gif");
   background-size: cover;
 }
 
@@ -513,7 +497,7 @@ footer p {
   top: 0;
   left: 0;
   background-color: #000000cc;
-  z-index: 9999;
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
   display: none;
@@ -764,15 +748,19 @@ responsive design for [iPhone X, Pixel 2]
     -webkit-transform: translate(-50%, -50%) scale(2);
             transform: translate(-50%, -50%) scale(2);
   }
-  .popup__content {
-    height: 40vw;
-    background-color: transparent;
+  .popup:target .popup__content html {
+    position: fixed;
   }
   .popup .close {
     position: absolute;
-    top: 70%;
-    right: 40%;
-    margin-bottom: 0;
+    z-index: 10000;
+    top: 0%;
+    right: 0%;
+    -webkit-clip-path: none;
+            clip-path: none;
+    color: transparent;
+    background-color: transparent;
+    padding: 100%;
   }
 }
 
@@ -782,24 +770,30 @@ responsive design for [iPhone X, Pixel 2]
   }
 }
 
+@media (max-height: 1200px) {
+  header {
+    top: 0%;
+    left: 0%;
+    right: 0%;
+  }
+}
+
 @media (max-height: 670px) {
   .projects-section {
     min-height: 350vh;
   }
 }
 
-@media (max-width: 1580px) {
+@media (min-width: 1360px) {
   .cards {
-    position: absolute;
-    left: 0;
-    right: 0;
+    left: 10%;
+    right: 10%;
   }
 }
 
-@media (min-width: 1360px) {
-  .cards {
-    left: 5%;
-    right: 5%;
+@media (min-width: 1360px) and (min-width: 2600px) {
+  .projects-section {
+    height: 80vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

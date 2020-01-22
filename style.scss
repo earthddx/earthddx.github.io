@@ -97,7 +97,7 @@ header {
     align-items: center;
     background-color: whitesmoke;
     background-image: linear-gradient(to right bottom,rgba(44, 165, 155, 0.7) , rgba(0, 0, 0, 0.7)),
-                     url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
+                     url("./images/background_gif.gif");
     background-size:cover;
     cursor: default;
     
@@ -206,6 +206,8 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     max-width: 70rem;
+    margin: auto;
+    
 }
 
 .card{
@@ -217,6 +219,8 @@ header {
     perspective: 150em;
     max-width: 15em;
     min-width: 14em;
+    margin: 2.5rem;
+    margin-top: 0;
 
     &-side {
         position: absolute;
@@ -246,25 +250,17 @@ header {
             cursor: default;
         }
 
-        &-1 .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark); 
+        &-1 .project-name-background,
+        &-2 .project-name-background,
+        &-3 .project-name-background,
+        &-4 .project-name-background,
+        &-5 .project-name-background,
+        &-6 .project-name-background{
+            background-image: linear-gradient(to right bottom,rgba(52, 11, 117, 0.5) , rgba(16, 75, 124, 0.7)),
+                            url("./images/background_gif.gif");
+            background-size:cover;
         }
-        &-2 .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-        }
-        &-3 .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
-   
-        }
-        &-4 .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark);
-        }
-        &-5  .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-quinary-light, $color-quinary-dark);
-        }
-        &-6  .project-name-background{
-            background-image: linear-gradient(to right bottom, $color-sextuple-light, $color-sextuple-dark);
-        }
+    
 
         
         h2{
@@ -379,7 +375,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-image: linear-gradient(to right bottom,rgba(44, 165, 155, 0.7) , rgba(0, 0, 0, 0.7)),
-                     url("https://4.bp.blogspot.com/-zO8hwvt7iMk/XAVxt4aoQvI/AAAAAAAAwa4/D5m3ApKkAAABZteHWWv_5uzTn8X7JaDxgCPcBGAYYCw/s1600/7T9364v.gif");
+    url("./images/background_gif.gif");
     background-size:cover;
     //box-shadow: 0 3px 8px rgba(black, 0.4);
     
@@ -439,7 +435,7 @@ footer {
     top: 0;
     left: 0;
     background-color: #000000cc;
-    z-index: 9999;
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     display: none;
@@ -661,23 +657,36 @@ responsive design for [iPhone X, Pixel 2]
     .popup:target .popup__content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(2); 
+        html{
+            position: fixed;
+        }
     }
-    .popup__content{
-        height: 40vw;
-        background-color: transparent;
-    }
+
     .popup .close {
         position: absolute;
-        top: 70%;
-        right: 40%;
-        margin-bottom: 0;
+        z-index: 10000;
+        top: 0%;
+        right: 0%;
+        clip-path: none;
+        color: transparent;
+        background-color: transparent;
+        padding: 100%;
     }
+
 }
 
 @media (max-height: 740px) {
     .projects-section{
         min-height: 320vh;
     }
+}
+@media (max-height: 1200px) {
+    header{
+        top: 0%;
+        left:0%;
+        right:0%; 
+    }
+
 }
 
 @media (max-height: 670px) {
@@ -686,17 +695,16 @@ responsive design for [iPhone X, Pixel 2]
     }
 }
 
-@media (max-width: 1580px) {
-    .cards{
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-}
 
 @media (min-width: 1360px) {
     .cards{
-        left: 5%;
-        right: 5%;
+        left: 10%;
+        right: 10%;
+    }
+
+@media (min-width: 2600px){
+        .projects-section{
+            height: 80vh;
+        }
     }
 }

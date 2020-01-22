@@ -4,13 +4,9 @@ $(document).ready(function() {
     scrollLink.click(function(e) {
       e.preventDefault();
       $('body,html').animate({
-        scrollTop: $(this.hash).offset().top -100
+        scrollTop: $(this.hash).offset().top -70
       }, 750 );
-
-      /*var target = $(this.hash)
-      if (target == $('#contact')){
-        $('.portfolio').css('opacity', '0');
-      }*/
       
 })
+
 })
