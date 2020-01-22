@@ -784,16 +784,17 @@ responsive design for [iPhone X, Pixel 2]
   }
 }
 
-@media (min-width: 1360px) {
-  .cards {
-    left: 10%;
-    right: 10%;
+@media (min-width: 2600px) {
+  .projects-section {
+    height: 80vh;
   }
 }
 
-@media (min-width: 1360px) and (min-width: 2600px) {
-  .projects-section {
-    height: 80vh;
+@media (max-width: 1835px) {
+  .cards {
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
