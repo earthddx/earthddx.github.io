@@ -708,3 +708,14 @@ responsive design for [iPhone X, Pixel 2]
     }
 }
 
+@media (max-height: 920px){
+    .projects-section{
+        height: 130vh;
+    }
+}
+
+@media (max-height: 975px){
+    .projects-section{
+        height: 125vh;
+    }
+}
