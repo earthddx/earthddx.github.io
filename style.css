@@ -285,18 +285,18 @@ header {
 }
 
 .card-front-2 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#df5e23), to(#c46711));
-  background-image: linear-gradient(to right bottom, #df5e23, #c46711);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#df5e23), to(#e68328));
+  background-image: linear-gradient(to right bottom, #df5e23, #e68328);
 }
 
 .card-front-3 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2aa17a), to(#3f683a));
-  background-image: linear-gradient(to right bottom, #2aa17a, #3f683a);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2aa17a), to(#38a12b));
+  background-image: linear-gradient(to right bottom, #2aa17a, #38a12b);
 }
 
 .card-front-4 .project-name-background {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1a5f59), to(#0a1109));
-  background-image: linear-gradient(to right bottom, #1a5f59, #0a1109);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#970f05), to(#0a1109));
+  background-image: linear-gradient(to right bottom, #970f05, #0a1109);
 }
 
 .card-front-5 .project-name-background {
@@ -384,18 +384,18 @@ header {
 }
 
 .card-back-2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#df5e23), to(#c46711));
-  background-image: linear-gradient(to right bottom, #df5e23, #c46711);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#df5e23), to(#e68328));
+  background-image: linear-gradient(to right bottom, #df5e23, #e68328);
 }
 
 .card-back-3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#2aa17a), to(#3f683a));
-  background-image: linear-gradient(to right bottom, #2aa17a, #3f683a);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2aa17a), to(#38a12b));
+  background-image: linear-gradient(to right bottom, #2aa17a, #38a12b);
 }
 
 .card-back-4 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1a5f59), to(#0a1109));
-  background-image: linear-gradient(to right bottom, #1a5f59, #0a1109);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#970f05), to(#0a1109));
+  background-image: linear-gradient(to right bottom, #970f05, #0a1109);
 }
 
 .card-back-5 {
