@@ -466,6 +466,10 @@ header {
   display: flex;
 }
 
+.github_page {
+  display: none;
+}
+
 .contact-link {
   text-decoration: none;
   color: inherit;
@@ -481,6 +485,17 @@ header {
 .contact-link:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.contact-link:hover .github_page {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
 }
 
 .fab,
@@ -794,6 +809,9 @@ responsive design for [iPhone X, Pixel 2]
     top: 0%;
     left: 0%;
     right: 0%;
+  }
+  .contact-link:hover .github_page {
+    display: none;
   }
 }
 
