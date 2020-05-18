@@ -31,7 +31,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
+  padding: .3em;
   background-color: #242222;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
           box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
@@ -83,7 +83,8 @@ header {
 
 .nav-scrolled {
   top: 0%;
-  padding: 0.1rem;
+  padding: 0.2rem;
+  background-color: rgba(36, 34, 34, 0.9);
 }
 
 /* Home Page */

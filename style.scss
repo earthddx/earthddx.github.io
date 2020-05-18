@@ -40,7 +40,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1em;
+  padding: .3em;
   background-color: $color-black;
   box-shadow: 0 3px 8px rgba(black, 0.4);
   transition: top 250ms ease-in;
@@ -81,7 +81,8 @@ header {
 
 .nav-scrolled {
   top: 0%;
-  padding: 0.1rem;
+  padding: 0.2rem;
+  background-color: rgba($color-black, .90);
 }
 
 /* Home Page */
